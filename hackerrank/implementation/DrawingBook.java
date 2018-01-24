@@ -1,10 +1,10 @@
-package hackerrank;
+package hackerrank.implementation;
 
 import java.util.*;
 import java.io.*;
 import java.math.*;
 
-public class Template {//Template forked from https://github.com/jeffrey-xiao/competitive-programming/blob/master/src/codebook/Template.java
+public class DrawingBook {//Template forked from https://github.com/jeffrey-xiao/competitive-programming/blob/master/src/codebook/Template.java
     static BufferedReader in;
     static PrintWriter out;
     static StringTokenizer st;
@@ -14,6 +14,20 @@ public class Template {//Template forked from https://github.com/jeffrey-xiao/co
         out = new PrintWriter(new OutputStreamWriter(System.out));
         // br = new BufferedReader(new FileReader("in.txt"));
         // out = new PrintWriter(new FileWriter("out.txt"));
+
+        int n = readInt();
+        int p = readInt();
+        int pages;
+        if(n-p<p-1){
+             pages = (int) Math.ceil((n-p)/2);
+        }
+        else{
+             pages = (int) Math.ceil(p/2);
+        }
+
+        out.write(String.valueOf(pages));
+
+
 
         out.close();
     }

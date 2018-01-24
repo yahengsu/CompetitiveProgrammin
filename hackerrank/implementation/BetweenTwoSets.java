@@ -4,7 +4,6 @@ import java.util.*;
 import java.io.*;
 import java.math.*;
 
-//TODO: UNSOLVED
 public class BetweenTwoSets {
 
     public static void main(String[] args) throws IOException {
@@ -29,8 +28,6 @@ public class BetweenTwoSets {
         }
 
         int count  = 0;
-
-        ArrayList<Integer> check = new ArrayList<>();
 
 
 

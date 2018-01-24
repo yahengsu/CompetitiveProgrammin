@@ -4,12 +4,12 @@ import java.util.*;
 import java.io.*;
 import java.math.*;
 public class Template {//Template forked from https://github.com/jeffrey-xiao/competitive-programming/blob/master/src/codebook/Template.java
-    static BufferedReader br;
+    static BufferedReader in;
     static PrintWriter out;
     static StringTokenizer st;
 
     public static void main (String[] args) throws IOException {
-        br = new BufferedReader(new InputStreamReader(System.in));
+        in = new BufferedReader(new InputStreamReader(System.in));
         out = new PrintWriter(new OutputStreamWriter(System.out));
         // br = new BufferedReader(new FileReader("in.txt"));
         // out = new PrintWriter(new FileWriter("out.txt"));
@@ -19,7 +19,7 @@ public class Template {//Template forked from https://github.com/jeffrey-xiao/co
 
     static String next () throws IOException {
         while (st == null || !st.hasMoreTokens())
-            st = new StringTokenizer(br.readLine().trim());
+            st = new StringTokenizer(in.readLine().trim());
         return st.nextToken();
     }
 
@@ -40,7 +40,7 @@ public class Template {//Template forked from https://github.com/jeffrey-xiao/co
     }
 
     static String readLine () throws IOException {
-        return br.readLine().trim();
+        return in.readLine().trim();
     }
 }
 
