@@ -1,20 +1,40 @@
-package hackerrank;
+package hackerrank.strings;
 
 import java.util.*;
 import java.io.*;
 import java.math.*;
 
-public class Template {//Template forked from https://github.com/jeffrey-xiao/competitive-programming/blob/master/src/codebook/Template.java
+public class SuperReducedString {
     static BufferedReader in;
     static PrintWriter out;
     static StringTokenizer st;
 
+    static String solve(String input){
+        int slength = input.length();
+        String temp = input;
+        if(slength == 0){
+            return "Empty String";
+        }
+        for(int i = 0; i < slength -1; i++){
+            if(input.charAt(i) == input.charAt(i+1)){
+                //substring front
+                //substring back
+                //recurse
+            }
+        }
+
+    }
 
     public static void main (String[] args) throws IOException {
         in = new BufferedReader(new InputStreamReader(System.in));
         out = new PrintWriter(new OutputStreamWriter(System.out));
         // br = new BufferedReader(new FileReader("in.txt"));
         // out = new PrintWriter(new FileWriter("out.txt"));
+
+        String input = readLine();
+        String output = solve(input);
+
+        out.write(output);
 
         out.close();
     }
@@ -45,4 +65,3 @@ public class Template {//Template forked from https://github.com/jeffrey-xiao/co
         return in.readLine().trim();
     }
 }
-
