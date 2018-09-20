@@ -1,7 +1,3 @@
-package leetcode.easy;
-
-import java.util.HashSet;
-
 public class UniqueMorseCodeWords {
     public int uniqueMorseRepresentations(String[] words) {
         String[] alphabet = {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};

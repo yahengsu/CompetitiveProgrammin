@@ -1,8 +1,3 @@
-package leetcode.easy;
-
-import java.util.*;
-import java.io.*;
-
 class TwoSum {
     public int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> n = new HashMap<>(nums.length);
