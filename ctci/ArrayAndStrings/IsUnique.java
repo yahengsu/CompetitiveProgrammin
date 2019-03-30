@@ -1,13 +1,13 @@
 class IsUnique {
     public boolean isUnique(String s) {
-        HashSet<Character> a = new HashSet<>();
+        boolean[] a = new char[128];
         for(int i = 0; i < s.length(); i++) {
             char b = s.charAt(i);
-            if(a.contains(b)) {
+            if(a[b]) {
                 return false;
             }
             else {
-                a.add(b);
+                a[b] = true;
             }
         }
         return true;
