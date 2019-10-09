@@ -3,10 +3,9 @@ from collections import deque
 
 def topView(root):
     # Write your code here
-    stack = []
-    vals = deque()
+    q = deque()
+    vals = []
+
     temp = root
     vals.append(root.info)
-    while temp:
-
-    print(" ".join(stack))
+    q.append(temp)
