@@ -1,41 +1,29 @@
-#!/bin/python3
-
-import os
-import sys
-
+# The function is expected to return an INTEGER.
+# The function accepts following parameters:
+#  1. INTEGER_ARRAY a
+#  2. INTEGER_ARRAY b
 #
-# Complete the getTotalX function below.
-#
+
+
 def getTotalX(a, b):
-    #
-    # Write your code here.
-    #
+    # Write your code here
     total = 0
-    for i in b:
-        add = True
-        for j in a:
-            if i&j != 0:
-                add = False
+    for i in range(max(a), min(b)+1):
+        good = True
+        for f in a:
+            if i % f != 0:
+                good = False
                 break
-        if add:
-            total += 1
+        if not good:
+            continue
+        else:
+            good = True
+            for f in b:
+                if f % i != 0:
+                    good = False
+                    break
+
+            if good:
+                total += 1
 
     return total
-if __name__ == '__main__':
-    f = open(os.environ['OUTPUT_PATH'], 'w')
-
-    nm = input().split()
-
-    n = int(nm[0])
-
-    m = int(nm[1])
-
-    a = list(map(int, input().rstrip().split()))
-
-    b = list(map(int, input().rstrip().split()))
-
-    total = getTotalX(a, b)
-
-    f.write(str(total) + '\n')
-
-    f.close()
