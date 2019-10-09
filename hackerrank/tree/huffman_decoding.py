@@ -9,7 +9,7 @@ def decodeHuff(root, s):
         elif c == "1":
             ptr = ptr.right
 
-        if ptr.data is not None:
+        if ptr.left is None and ptr.right is None:
             st += ptr.data
             ptr = root
 
