@@ -1,0 +1,1 @@
+def minimumBribes(q):
