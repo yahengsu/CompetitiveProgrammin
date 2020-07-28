@@ -1,39 +1,33 @@
-package hackerrank.greedy;
+package leetcode.easy;
 
 import java.util.*;
 import java.io.*;
-import java.math.*;
 
-public class MinimumAbsoluteDifference {
+public class CodeJam {
     static BufferedReader in;
     static PrintWriter out;
     static StringTokenizer st;
+
+    static int[] calc(int N) {
+        int[] ret = new int[2];
+        int digits = String.valueOf(N).length();
+        System.out.println(digits);
+        ret[0] = 11;
+        ret[1] = 22;
+        return ret;
+    }
 
     public static void main (String[] args) throws IOException {
         in = new BufferedReader(new InputStreamReader(System.in));
         out = new PrintWriter(new OutputStreamWriter(System.out));
         // br = new BufferedReader(new FileReader("in.txt"));
         // out = new PrintWriter(new FileWriter("out.txt"));
-
-        int n = readInt();
-        int[] a = new int[n];
-
-        for(int i = 0; i < n; i++){
-            a[i] = readInt();
+        int T = readInt();
+        for(int i = 0; i < T; i++) {
+            int N = readInt();
+            int[] a = calc(N);
+            out.println("Case #" + (i + 1) + ": " + a[0] + " " + a[1]);
         }
-
-        Arrays.sort(a);
-
-        int min = Integer.MAX_VALUE;
-
-        for(int i  = 0; i < n-1; i++){
-            int diff = a[i+1] - a[i];
-            if(diff<min)
-                min = diff;
-        }
-
-        out.write(String.valueOf(min));
-
 
         out.close();
     }
@@ -63,5 +57,5 @@ public class MinimumAbsoluteDifference {
     static String readLine () throws IOException {
         return in.readLine().trim();
     }
-
 }
+

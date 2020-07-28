@@ -7,6 +7,9 @@ class PalindromePermutation {
         //to be palindrome need the same number of characters
         char[] chars = a.toCharArray();
         
+        for(int i = 0; i < chars.length; i++) {
+            count[chars[i]] += 1;
+        }
 
 
         return true;

@@ -1,6 +1,7 @@
+
 class IsUnique {
-    public boolean isUnique(String s) {
-        boolean[] a = new char[128];
+    public static boolean isUnique(String s) {
+        boolean[] a = new boolean[128];
         for(int i = 0; i < s.length(); i++) {
             char b = s.charAt(i);
             if(a[b]) {
@@ -13,7 +14,7 @@ class IsUnique {
         return true;
     }
 
-    public boolean isUniqueNoDataStructures(String s) {
+    public static boolean isUniqueNoDataStructures(String s) {
         for(int i = 0; i < s.length(); i++) {
             for(int j = 0; j < s.length(); j++) {
                 if(i == j)
@@ -26,6 +27,13 @@ class IsUnique {
         }
 
         return true;
+    }
+
+    public static void main(String[] args) {
+        String test1 = "hello this is not unique";
+        String test2 = "abcdefghijk12345";
+        System.out.println(isUnique(test1));
+        System.out.println(isUnique(test2));
     }
 }
 
