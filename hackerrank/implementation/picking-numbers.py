@@ -13,29 +13,22 @@ import sys
 # The function accepts INTEGER_ARRAY a as parameter.
 #
 
+
 def pickingNumbers(a):
     # Write your code here
     numbers = 0
+    a.sort()
+    for i in range(0, len(a)):
+        a_max = 0
+        a_min = a[i]
+        for j in range(i, len(a)):
+            if abs(a[j] - a_min) <= 1:
+                a_max += 1
+            else:
+                break
+            if a[j] < a_min:
+                a_min = a[j]
+        if a_max > numbers:
+            numbers = a_max
 
-    for i in range(0,len(a)):
-        max = 0
-        for j in range(0, len(a)):
-            if i != j:
-                if abs(a[i] - a[j]) <= 1:
-                    max += 1
-        if max > numbers:
-            numbers = max
-            
     return numbers
-if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
-
-    n = int(input().strip())
-
-    a = list(map(int, input().rstrip().split()))
-
-    result = pickingNumbers(a)
-
-    fptr.write(str(result) + '\n')
-
-    fptr.close()
