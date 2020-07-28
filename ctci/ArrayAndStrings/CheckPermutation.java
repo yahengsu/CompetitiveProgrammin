@@ -1,5 +1,5 @@
 class CheckPermutation {
-    public boolean isPermutation(String a, String b) {
+    public static boolean isPermutation(String a, String b) {
         if(a.length() != b.length())
             return false;
         int[] chars = new int[128];
@@ -16,5 +16,13 @@ class CheckPermutation {
         }
 
         return true;
+    }
+    
+    public static void main(String[] args) {
+        String s1 = "aaabbb";
+        String s2 = "bbbaaa";
+        String s3 = "cccaaa";
+        System.out.println(isPermutation(s1, s2));
+        System.out.println(isPermutation(s1, s3));
     }
 }
