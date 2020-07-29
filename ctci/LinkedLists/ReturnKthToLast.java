@@ -1,5 +1,4 @@
 package LinkedLists;
-import LinkedLists.Node;
 
 public class ReturnKthToLast {
     public static Node returnKthToLast(Node head, int k) {
