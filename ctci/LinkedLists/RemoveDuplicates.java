@@ -1,6 +1,3 @@
-package LinkedLists;
-import java.util.HashSet;
-
 import java.util.*;
 
 public class RemoveDuplicates {

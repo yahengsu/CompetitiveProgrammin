@@ -1,4 +1,3 @@
-package LinkedLists;
 
 public class Node {
     public Node next = null;
