@@ -1,4 +1,3 @@
-import java.util.*;
 
 public class Intersection {
     public static Node intersect(Node n1, Node n2) {
